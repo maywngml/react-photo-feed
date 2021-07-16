@@ -336,7 +336,7 @@
                 var r = e.props.InformationElement
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
-                  o = [d.default.imageWrapper]
+                  o = [d.default.imageWrapper];
                 return s.default.createElement(
                   "div",
                   null,
@@ -344,9 +344,12 @@
                     "video",
                     {
                       className: o.join(" "),
-                    //   onClick: e.image_clickHandler(t, n),
+                      //   onClick: e.image_clickHandler(t, n),
                     },
-                    s.default.createElement("source", { src: t.src, type: "video/mp4" })
+                    s.default.createElement("source", {
+                      src: t.src,
+                      type: "video/mp4",
+                    })
                   ),
                   null
                 );
@@ -355,7 +358,7 @@
                 var r = e.props.InformationElement
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
-                  o = [d.default.imageWrapper],
+                  o = [d.default.imageWrapper];
                 //   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
                   "div",
@@ -365,8 +368,8 @@
                     {
                       className: o.join(" "),
                       onClick: e.image_clickHandler(t, n),
-                    //   style: i,
-                    },
+                      //   style: i,
+                    }
                     // s.default.createElement("a", { href: "#" }, t.title)
                   ),
                   null
