@@ -428,8 +428,8 @@
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
               }),
-              (e.getPercentHeigth = function () {
-                return 40 / e.props.columns - 1;
+              (e.getPercentHeight = function () {
+                return 50 / e.props.columns - 1;
               }),
               (e.getNextPhotoIndex = function (t) {
                 return e.props.photos.length > t + 1 ? t + 1 : 0;
@@ -466,7 +466,7 @@
                     n = [d.default.imageGridItem],
                     r = {
                       width: this.getPercentWidth() + "%",
-                      height: this.getPercentHeigth() + "%",
+                      height: this.getPercentHeight() + "%",
                     };
                   return t.map(function (t, o) {
                     return s.default.createElement(
