@@ -338,8 +338,8 @@
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
                 return s.default.createElement(
-                  "div",
-                  null,
+                  //   "div",
+                  //   null,
                   s.default.createElement(
                     "video",
                     {
@@ -362,8 +362,8 @@
                   o = [d.default.imageWrapper];
                 //   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
-                  "div",
-                  null,
+                  //   "div",
+                  //   null,
                   s.default.createElement(
                     "img",
                     {
