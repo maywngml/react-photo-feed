@@ -977,7 +977,7 @@
     },
     function (e, t) {
       e.exports = {
-        imageGridItem: "PhotoGrid__imageGridItem___hFxCm",
+        imageGridItem: "PhotoGrid__imageGridItem___12345",
         imageWrapper: "PhotoGrid__imageWrapper___1YTK9",
         column1: "PhotoGrid__column1___3xTvr",
         column1Image: "PhotoGrid__column1Image___2KDMR",
