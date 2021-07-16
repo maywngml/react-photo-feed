@@ -34,7 +34,7 @@ class PhotoGrid extends React.Component {
 
     return photos.map((photo, index) => (
       <div className={classNames.join(" ")} style={style} key={photo.id}>
-        {this.getImageElement(photo, index)}
+        {/* {this.getImageElement(photo, index)} */}
       </div>
     ));
   }
