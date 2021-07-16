@@ -450,10 +450,11 @@
               {
                 key: "render",
                 value: function () {
+                  var r = { height: "100%" };
                   return s.default.createElement(
                     "div",
                     {
-                      style: "height: 100%",
+                      style: r,
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
