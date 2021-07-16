@@ -345,7 +345,7 @@
                   s.default.createElement(
                     "video",
                     {
-                      controls,
+                      controls: true,
                       //   onClick: e.image_clickHandler(t, n),
                     },
                     s.default.createElement("source", {
