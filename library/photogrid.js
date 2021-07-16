@@ -340,19 +340,19 @@
                 return s.default.createElement(
                   //   "div",
                   //   null,
-                  s.default.createElement(
-                    "video",
-                    {
-                      className: o.join(" "),
-                      controls: true,
-                      //   onClick: e.image_clickHandler(t, n),
-                    },
-                    s.default.createElement("source", {
-                      src: t.src,
-                      type: "video/mp4",
-                    })
-                  ),
-                  null
+                  //   s.default.createElement(
+                  "video",
+                  {
+                    className: o.join(" "),
+                    controls: true,
+                    //   onClick: e.image_clickHandler(t, n),
+                  },
+                  s.default.createElement("source", {
+                    src: t.src,
+                    type: "video/mp4",
+                  })
+                  //   ),
+                  //   null
                 );
               }),
               (e.getImageElement = function (t, n) {
@@ -364,17 +364,17 @@
                 return s.default.createElement(
                   //   "div",
                   //   null,
-                  s.default.createElement(
-                    "img",
-                    {
-                      className: o.join(" "),
-                      src: t.src,
-                      onClick: e.image_clickHandler(t, n),
-                      //   style: i,
-                    }
-                    // s.default.createElement("a", { href: "#" }, t.title)
-                  ),
-                  null
+                  //   s.default.createElement(
+                  "img",
+                  {
+                    className: o.join(" "),
+                    src: t.src,
+                    onClick: e.image_clickHandler(t, n),
+                    //   style: i,
+                  }
+                  // s.default.createElement("a", { href: "#" }, t.title)
+                  //   ),
+                  //   null
                 );
               }),
               (e.getFullScreenImage = function (t) {
