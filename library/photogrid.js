@@ -336,9 +336,7 @@
                 var r = e.props.InformationElement
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
-                  o = e.isShowInfo()
-                    ? [d.default.imageWrapper, d.default.column1Image]
-                    : [d.default.imageWrapper],
+                  o = [d.default.imageWrapper],
                   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
                   "div",
@@ -352,9 +350,7 @@
                     },
                     s.default.createElement("a", { href: "#" }, t.title)
                   ),
-                  e.isShowInfo()
-                    ? s.default.createElement(r, { photo: t })
-                    : null
+                  null
                 );
               }),
               (e.getFullScreenImage = function (t) {
@@ -405,9 +401,9 @@
                   fullScreenImageIndex: r,
                 });
               }),
-              (e.isShowInfo = function () {
-                return 1 == e.props.columns;
-              }),
+              //   (e.isShowInfo = function () {
+              //     return 1 == e.props.columns;
+              //   }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
               }),
@@ -443,12 +439,8 @@
                 value: function () {
                   var e = this,
                     t = this.props.photos,
-                    n = this.isShowInfo()
-                      ? [d.default.imageGridItem, d.default.column1]
-                      : [d.default.imageGridItem],
-                    r = this.isShowInfo()
-                      ? {}
-                      : { width: this.getPercentWidth() + "%" };
+                    n = [d.default.imageGridItem],
+                    r = { width: this.getPercentWidth() + "%" };
                   return t.map(function (t, o) {
                     return s.default.createElement(
                       "div",
