@@ -339,12 +339,11 @@
                   o = [d.default.imageWrapper];
                 return s.default.createElement(
                   "div",
-                  {
-                    className: o.join(" "),
-                  },
+                  null,
                   s.default.createElement(
                     "video",
                     {
+                      className: o.join(" "),
                       controls: true,
                       //   onClick: e.image_clickHandler(t, n),
                     },
@@ -364,12 +363,11 @@
                 //   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
                   "div",
-                  {
-                    className: o.join(" "),
-                  },
+                  null,
                   s.default.createElement(
                     "img",
                     {
+                      className: o.join(" "),
                       src: t.src,
                       onClick: e.image_clickHandler(t, n),
                       //   style: i,
