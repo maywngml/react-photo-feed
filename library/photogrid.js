@@ -452,7 +452,9 @@
                 value: function () {
                   return s.default.createElement(
                     "div",
-                    null,
+                    {
+                      style: "height: 100%",
+                    },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   );
