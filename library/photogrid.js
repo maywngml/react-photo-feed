@@ -332,23 +332,42 @@
               (t.__proto__ || Object.getPrototypeOf(t)).call(this)
             );
             return (
+              (e.getVideoElement = function (t, n) {
+                var r = e.props.InformationElement
+                    ? e.props.InformationElement
+                    : m.DefaultInfoElement,
+                  o = [d.default.imageWrapper]
+                return s.default.createElement(
+                  "div",
+                  null,
+                  s.default.createElement(
+                    "video",
+                    {
+                      className: o.join(" "),
+                    //   onClick: e.image_clickHandler(t, n),
+                    },
+                    s.default.createElement("source", { src: t.src, type: "video/mp4" })
+                  ),
+                  null
+                );
+              }),
               (e.getImageElement = function (t, n) {
                 var r = e.props.InformationElement
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper],
-                  i = { backgroundImage: "url(" + t.src + ")" };
+                //   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
                   "div",
                   null,
                   s.default.createElement(
-                    "div",
+                    "img",
                     {
                       className: o.join(" "),
                       onClick: e.image_clickHandler(t, n),
-                      style: i,
+                    //   style: i,
                     },
-                    s.default.createElement("a", { href: "#" }, t.title)
+                    // s.default.createElement("a", { href: "#" }, t.title)
                   ),
                   null
                 );
@@ -401,9 +420,6 @@
                   fullScreenImageIndex: r,
                 });
               }),
-              //   (e.isShowInfo = function () {
-              //     return 1 == e.props.columns;
-              //   }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
               }),
@@ -445,7 +461,9 @@
                     return s.default.createElement(
                       "div",
                       { className: n.join(" "), style: r, key: t.id },
-                      e.getImageElement(t, o)
+                      t.isVideo
+                        ? e.getVideoElement(t, o)
+                        : e.getImageElement(t, o)
                     );
                   });
                 },
