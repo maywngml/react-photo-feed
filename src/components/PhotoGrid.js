@@ -5,7 +5,7 @@ import { DefaultInfoElement } from "./DefaultInfoElement";
 
 class PhotoGrid extends React.Component {
   static propTypes = {
-    photos: PropTypes.array /* { src, id, bigSrc}*/,
+    photos: PropTypes.array /* { src, id, bigSrc, isVideo}*/,
     columns: PropTypes.number,
     InformationElement: PropTypes.func,
   };
@@ -34,24 +34,36 @@ class PhotoGrid extends React.Component {
 
     return photos.map((photo, index) => (
       <div className={classNames.join(" ")} style={style} key={photo.id}>
-        {/* {this.getImageElement(photo, index)} */}
+        {photo.isVideo
+          ? this.getVideoElement(photo, index)
+          : this.getImageElement(photo, index)}
       </div>
     ));
   }
 
+  getVideoElement = (video, index) => {
+    const classNames = [styles.imageWrapper];
+    return (
+      <video
+        className={classNames.join(" ")}
+        // onClick={this.image_clickHandler(photo, index)}
+      >
+        <source src={video.src} type="video/mp4"></source>
+      </video>
+    );
+  };
+
   getImageElement = (photo, index) => {
     // const InformationElement = this.props.InformationElement ? this.props.InformationElement : DefaultInfoElement;
     const classNames = [styles.imageWrapper];
-    const style = { backgroundImage: `url(${photo.src})` };
+    // const style = { backgroundImage: `url(${photo.src})` };
 
     return (
-      <div
+      <img
         className={classNames.join(" ")}
         onClick={this.image_clickHandler(photo, index)}
-        style={style}
-      >
-        <a href="#">{photo.title}</a>
-      </div>
+        src={photo.src}
+      />
     );
   };
 
