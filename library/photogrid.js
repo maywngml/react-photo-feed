@@ -400,7 +400,7 @@
                           n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                       },
                         s.default.createElement("source"), {
-                        src: t.bigSrc,
+                        src: n.bigSrc,
                         type: "video/mp4"
                       })
                     }
