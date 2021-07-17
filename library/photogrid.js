@@ -415,11 +415,11 @@
                   //   }
                   // })
                   s.default.createElement("img", {
-                    key: n.id,
-                    src: n.bigSrc,
-                    className: n.bigSrc == t ? "opaque" : "",
+                    // key: n.id,
+                    src: r.bigSrc,
+                    className: r.bigSrc == t ? "opaque" : "",
                     onClick:
-                      n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
+                      r.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                   })
                 );
               }),
