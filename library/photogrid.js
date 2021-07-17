@@ -383,9 +383,8 @@
                     : [d.default.hide, d.default.lightbox],
                   r = e.props.photos;
                 return s.default.createElement(
-                  "a",
+                  "div",
                   {
-                    href: "#_",
                     className: n.join(" "),
                     onClick: e.lightBox_clickHandler,
                   },
