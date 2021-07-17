@@ -345,7 +345,7 @@
                   {
                     className: o.join(" "),
                     controls: true,
-                    //   onClick: e.image_clickHandler(t, n),
+                      onClick: e.image_clickHandler(t, n),
                   },
                   s.default.createElement("source", {
                     src: t.src,
@@ -389,15 +389,22 @@
                     className: n.join(" "),
                     onClick: e.lightBox_clickHandler,
                   },
-                  r.map(function (n, r) {
-                    return s.default.createElement("img", {
-                      key: n.id,
-                      src: n.bigSrc,
-                      className: n.bigSrc == t ? "opaque" : "",
-                      onClick:
-                        n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
-                    });
+                  s.default.createElement("img", {
+                    key: n.id,
+                    src: n.bigSrc,
+                    className: n.bigSrc == t ? "opaque" : "",
+                    onClick:
+                      n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                   })
+                  // r.map(function (n, r) {
+                  //   return s.default.createElement("img", {
+                  //     key: n.id,
+                  //     src: n.bigSrc,
+                  //     className: n.bigSrc == t ? "opaque" : "",
+                  //     onClick:
+                  //       n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
+                  //   });
+                  // })
                 );
               }),
               (e.image_clickHandler = function (t, n) {
