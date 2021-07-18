@@ -394,7 +394,7 @@
                         key: n.id,
                         // src: n.bigSrc,
                         controls: true,
-                        className: "opaque",
+                        className: n.bigSrc == t ? "opaque" : "",
                         onClick: e.fullScreenImage_clickHandler
                       },
                         s.default.createElement("source", {
