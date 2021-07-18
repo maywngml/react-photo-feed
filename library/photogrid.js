@@ -345,7 +345,7 @@
                   {
                     className: o.join(" "),
                     controls: true,
-                    onClick: e.image_clickHandler(t, n),
+                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
                   },
                   s.default.createElement("source", {
                     src: t.src,
@@ -369,7 +369,7 @@
                   {
                     className: o.join(" "),
                     src: t.src,
-                    onClick: e.image_clickHandler(t, n),
+                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
                     //   style: i,
                   }
                   // s.default.createElement("a", { href: "#" }, t.title)
@@ -389,21 +389,21 @@
                     onClick: e.lightBox_clickHandler,
                   },
                   r.map(function (n, r) {
-                    if (n.isVideo) {
-                      return s.default.createElement("video", {
-                        key: n.id,
-                        // src: n.bigSrc,
-                        controls: true,
-                        className: "opaque",
-                        onClick: e.fullScreenImage_clickHandler
-                      },
-                        s.default.createElement("source", {
-                        src: n.bigSrc,
-                        type: "video/mp4"
-                        })
-                      )
-                    }
-                    else {
+                    // if (n.isVideo) {
+                    //   return s.default.createElement("video", {
+                    //     key: n.id,
+                    //     // src: n.bigSrc,
+                    //     controls: true,
+                    //     className: "opaque",
+                    //     onClick: e.fullScreenImage_clickHandler
+                    //   },
+                    //     s.default.createElement("source", {
+                    //     src: n.bigSrc,
+                    //     type: "video/mp4"
+                    //     })
+                    //   )
+                    // }
+                    // else {
                       return s.default.createElement("img", {
                         key: n.id,
                         src: n.bigSrc,
@@ -411,7 +411,7 @@
                         onClick:
                           n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                       });
-                    }
+                    // }
                   })
                 );
               }),
