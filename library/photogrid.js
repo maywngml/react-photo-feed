@@ -389,13 +389,29 @@
                     onClick: e.lightBox_clickHandler,
                   },
                   r.map(function (n, r) {
-                    return s.default.createElement("img",
-                      {
+                    if (n.isVideo) {
+                      return s.default.createElement("video", {
+                        key: n.id,
+                        // src: n.bigSrc,
+                        controls: true,
+                        className: "opaque",
+                        onClick: e.fullScreenImage_clickHandler
+                      },
+                        s.default.createElement("source", {
+                        src: n.bigSrc,
+                        type: "video/mp4"
+                        })
+                      )
+                    }
+                    else {
+                      return s.default.createElement("img", {
                         key: n.id,
                         src: n.bigSrc,
                         className: n.bigSrc == t ? "opaque" : "",
-                        onClick: n.bigSrc == t ? e.fullScreenImage_clickHandler : null
-                      })
+                        onClick:
+                          n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
+                      });
+                    }
                   })
                 );
               }),
