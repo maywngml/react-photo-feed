@@ -338,19 +338,24 @@
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
                 return s.default.createElement(
-                  "video",
+                  "div",
                   {
                     className: o.join(" "),
-                    // controls: true,
                     onClick:
                       e.pinchInFlag || e.pinchOutFlag
                         ? null
                         : e.image_clickHandler(t, n),
                   },
-                  s.default.createElement("source", {
-                    src: t.src,
-                    type: "video/mp4",
-                  }),
+                  s.default.createElement(
+                    "video",
+                    {
+                      // controls: true,
+                    },
+                    s.default.createElement("source", {
+                      src: t.src,
+                      type: "video/mp4",
+                    })
+                  ),
                   s.default.createElement("img", {
                     className: "button__in__video",
                     src: e.props.playButton,
