@@ -135,3 +135,8 @@
   transition: all 5s;
   transition-delay: 2s;
 }
+
+.button__in__video {
+  position: absolute;
+  top: 50%;
+}

@@ -338,9 +338,6 @@
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
                 return s.default.createElement(
-                  //   "div",
-                  //   null,
-                  //   s.default.createElement(
                   "video",
                   {
                     className: o.join(" "),
@@ -353,6 +350,9 @@
                   s.default.createElement("source", {
                     src: t.src,
                     type: "video/mp4",
+                  }),
+                  s.default.createElement("img", {
+                    className: "button__in__video", src: "./assets/playButton.png", alt="playButton"
                   })
                 );
               }),
@@ -361,24 +361,16 @@
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
-                //   i = { backgroundImage: "url(" + t.src + ")" };
                 return s.default.createElement(
-                  //   "div",
-                  //   null,
-                  //   s.default.createElement(
                   "img",
                   {
                     className: o.join(" "),
                     src: t.src,
-                    // 되면 지워
                     onClick:
                       e.pinchInFlag || e.pinchOutFlag
                         ? null
                         : e.image_clickHandler(t, n),
                   }
-                  // s.default.createElement("a", { href: "#" }, t.title)
-                  //   ),
-                  //   null
                 );
               }),
               (e.getFullScreenImage = function (t) {
