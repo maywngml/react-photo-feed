@@ -494,7 +494,7 @@
                       t.isVideo
                         ? s.default.createElement("img", {
                             className: "button__in__video",
-                            src: "../assets/playButton.png",
+                            src: this.props.playButton,
                             alt: "playButton",
                           })
                         : null
