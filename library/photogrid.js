@@ -350,6 +350,11 @@
                   s.default.createElement("source", {
                     src: t.src,
                     type: "video/mp4",
+                  }),
+                  s.default.createElement("img", {
+                    className: "button__in__video",
+                    src: e.props.playButton,
+                    alt: "playButton",
                   })
                 );
               }),
@@ -490,14 +495,7 @@
                       },
                       t.isVideo
                         ? e.getVideoElement(t, o)
-                        : e.getImageElement(t, o),
-                      t.isVideo
-                        ? s.default.createElement("img", {
-                            className: "button__in__video",
-                            src: e.props.playButton,
-                            alt: "playButton",
-                          })
-                        : null
+                        : e.getImageElement(t, o)
                     );
                   });
                 },
