@@ -94,7 +94,8 @@
   transition: all 0.5s;
 }
 
-.PhotoGrid__lightbox___2hnqF img, video {
+.PhotoGrid__lightbox___2hnqF img,
+.PhotoGrid__lightbox___2hnqF video {
   /** Pad the lightbox image */
   max-width: 100%;
   max-height: 100%;
@@ -115,7 +116,8 @@
   pointer-events: none;
 }
 
-.PhotoGrid__lightbox___2hnqF img.opaque, video.opaque {
+.PhotoGrid__lightbox___2hnqF img.opaque,
+.PhotoGrid__lightbox___2hnqF video.opaque {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
