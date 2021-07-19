@@ -136,8 +136,13 @@
   transition-delay: 2s;
 }
 
+.video {
+  width: 100%;
+}
+
 .button__in__video {
   position: absolute;
   top: 50%;
-  z-index: 2;
+  margin: -17% 0 0 -65%;
+  width: 35%;
 }
