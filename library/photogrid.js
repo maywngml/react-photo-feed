@@ -402,10 +402,11 @@
                           // src: n.bigSrc,
                           controls: true,
                           className: n.bigSrc == t ? "opaque" : "",
-                          onClick:
-                            n.bigSrc == t
-                              ? e.fullScreenImage_clickHandler
-                              : null,
+                          // 전체화면에서 클릭하면 다음 이미지로 변경되는 부분 지워야돼
+                          // onClick:
+                          //   n.bigSrc == t
+                          //     ? e.fullScreenImage_clickHandler
+                          //     : null,
                         },
                         s.default.createElement("source", {
                           src: n.bigSrc,
@@ -417,8 +418,9 @@
                         key: n.id,
                         src: n.bigSrc,
                         className: n.bigSrc == t ? "opaque" : "",
-                        onClick:
-                          n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
+                        // 전체화면에서 클릭하면 다음 이미지로 변경되는 부분 지워야돼
+                        // onClick:
+                        //   n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                       });
                     }
                   })
