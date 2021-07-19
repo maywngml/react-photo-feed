@@ -353,7 +353,7 @@
                   }),
                   s.default.createElement("img", {
                     className: "button__in__video",
-                    src: "./assets/playButton.png",
+                    src: "../assets/playButton.png",
                     alt: "playButton",
                   })
                 );
