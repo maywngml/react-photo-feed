@@ -345,14 +345,15 @@
                   {
                     className: o.join(" "),
                     controls: true,
-                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
+                    onClick:
+                      e.pinchInFlag || e.pinchOutFlag
+                        ? null
+                        : e.image_clickHandler(t, n),
                   },
                   s.default.createElement("source", {
                     src: t.src,
                     type: "video/mp4",
                   })
-                  //   ),
-                  //   null
                 );
               }),
               (e.getImageElement = function (t, n) {
@@ -369,7 +370,10 @@
                   {
                     className: o.join(" "),
                     src: t.src,
-                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
+                    onClick:
+                      e.pinchInFlag || e.pinchOutFlag
+                        ? null
+                        : e.image_clickHandler(t, n),
                     //   style: i,
                   }
                   // s.default.createElement("a", { href: "#" }, t.title)
@@ -390,20 +394,24 @@
                   },
                   r.map(function (n, r) {
                     if (n.isVideo) {
-                      return s.default.createElement("video", {
-                        key: n.id,
-                        // src: n.bigSrc,
-                        controls: true,
-                        className: n.bigSrc == t ? "opaque" : "",
-                        onClick: e.fullScreenImage_clickHandler
-                      },
+                      return s.default.createElement(
+                        "video",
+                        {
+                          key: n.id,
+                          // src: n.bigSrc,
+                          controls: true,
+                          className: n.bigSrc == t ? "opaque" : "",
+                          onClick:
+                            n.bigSrc == t
+                              ? e.fullScreenImage_clickHandler
+                              : null,
+                        },
                         s.default.createElement("source", {
-                        src: n.bigSrc,
-                        type: "video/mp4"
+                          src: n.bigSrc,
+                          type: "video/mp4",
                         })
-                      )
-                    }
-                    else {
+                      );
+                    } else {
                       return s.default.createElement("img", {
                         key: n.id,
                         src: n.bigSrc,
