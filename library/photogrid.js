@@ -352,7 +352,9 @@
                     type: "video/mp4",
                   }),
                   s.default.createElement("img", {
-                    className: "button__in__video", src: "./assets/playButton.png", alt="playButton"
+                    className: "button__in__video",
+                    src: "./assets/playButton.png",
+                    alt: "playButton",
                   })
                 );
               }),
@@ -361,17 +363,14 @@
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
-                return s.default.createElement(
-                  "img",
-                  {
-                    className: o.join(" "),
-                    src: t.src,
-                    onClick:
-                      e.pinchInFlag || e.pinchOutFlag
-                        ? null
-                        : e.image_clickHandler(t, n),
-                  }
-                );
+                return s.default.createElement("img", {
+                  className: o.join(" "),
+                  src: t.src,
+                  onClick:
+                    e.pinchInFlag || e.pinchOutFlag
+                      ? null
+                      : e.image_clickHandler(t, n),
+                });
               }),
               (e.getFullScreenImage = function (t) {
                 var n = t
