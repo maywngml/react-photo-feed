@@ -344,12 +344,11 @@
                   "video",
                   {
                     className: o.join(" "),
-                    controls: true,
-                    // 되면 지원
-                    // onClick:
-                    //   e.pinchInFlag || e.pinchOutFlag
-                    //     ? null
-                    //     : e.image_clickHandler(t, n),
+                    // controls: true,
+                    onClick:
+                      e.pinchInFlag || e.pinchOutFlag
+                        ? null
+                        : e.image_clickHandler(t, n),
                   },
                   s.default.createElement("source", {
                     src: t.src,
@@ -372,11 +371,10 @@
                     className: o.join(" "),
                     src: t.src,
                     // 되면 지워
-                    // onClick:
-                    //   e.pinchInFlag || e.pinchOutFlag
-                    //     ? null
-                    //     : e.image_clickHandler(t, n),
-                    //   style: i,
+                    onClick:
+                      e.pinchInFlag || e.pinchOutFlag
+                        ? null
+                        : e.image_clickHandler(t, n),
                   }
                   // s.default.createElement("a", { href: "#" }, t.title)
                   //   ),
@@ -503,10 +501,6 @@
                         className: n.join(" "),
                         style: r,
                         key: t.id,
-                        onClick:
-                          e.pinchInFlag || e.pinchOutFlag
-                            ? null
-                            : e.image_clickHandler(t, o),
                       },
                       t.isVideo
                         ? e.getVideoElement(t, o)
