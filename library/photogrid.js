@@ -345,10 +345,11 @@
                   {
                     className: o.join(" "),
                     controls: true,
-                    onClick:
-                      e.pinchInFlag || e.pinchOutFlag
-                        ? null
-                        : e.image_clickHandler(t, n),
+                    // 되면 지원
+                    // onClick:
+                    //   e.pinchInFlag || e.pinchOutFlag
+                    //     ? null
+                    //     : e.image_clickHandler(t, n),
                   },
                   s.default.createElement("source", {
                     src: t.src,
@@ -370,10 +371,11 @@
                   {
                     className: o.join(" "),
                     src: t.src,
-                    onClick:
-                      e.pinchInFlag || e.pinchOutFlag
-                        ? null
-                        : e.image_clickHandler(t, n),
+                    // 되면 지워
+                    // onClick:
+                    //   e.pinchInFlag || e.pinchOutFlag
+                    //     ? null
+                    //     : e.image_clickHandler(t, n),
                     //   style: i,
                   }
                   // s.default.createElement("a", { href: "#" }, t.title)
@@ -497,7 +499,15 @@
                   return t.map(function (t, o) {
                     return s.default.createElement(
                       "div",
-                      { className: n.join(" "), style: r, key: t.id },
+                      {
+                        className: n.join(" "),
+                        style: r,
+                        key: t.id,
+                        onClick:
+                          e.pinchInFlag || e.pinchOutFlag
+                            ? null
+                            : e.image_clickHandler(t, o),
+                      },
                       t.isVideo
                         ? e.getVideoElement(t, o)
                         : e.getImageElement(t, o)
