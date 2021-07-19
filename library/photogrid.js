@@ -345,6 +345,8 @@
                   {
                     className: o.join(" "),
                     controls: true,
+                    // 지워
+                    src: "",
                     onClick:
                       e.pinchInFlag || e.pinchOutFlag
                         ? null
