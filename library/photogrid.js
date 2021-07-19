@@ -384,6 +384,7 @@
                   e.props.changeOptionsPinch(false);
                 } else {
                   n = [d.default.hide, d.default.lightbox];
+                  e.props.changeOptionsPinch(true);
                 }
                 let r = e.props.photos;
                 return s.default.createElement(
@@ -436,8 +437,7 @@
                   e.setState({
                     fullScreenImage: null,
                     fullScreenImageIndex: null,
-                  }) &&
-                  e.props.changeOptionsPinch(true);
+                  });
               }),
               (e.fullScreenImage_clickHandler = function (t) {
                 t.stopPropagation();
