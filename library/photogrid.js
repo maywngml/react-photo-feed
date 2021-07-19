@@ -378,10 +378,14 @@
                 });
               }),
               (e.getFullScreenImage = function (t) {
-                var n = t
-                    ? [d.default.lightbox]
-                    : [d.default.hide, d.default.lightbox],
-                  r = e.props.photos;
+                let n;
+                if (t) {
+                  n = [d.default.lightbox];
+                  e.props.changeOptionsPinch(false);
+                } else {
+                  n = [d.default.hide, d.default.lightbox];
+                }
+                let r = e.props.photos;
                 return s.default.createElement(
                   "div",
                   {
@@ -432,7 +436,8 @@
                   e.setState({
                     fullScreenImage: null,
                     fullScreenImageIndex: null,
-                  });
+                  }) &&
+                  e.props.changeOptionsPinch(true);
               }),
               (e.fullScreenImage_clickHandler = function (t) {
                 t.stopPropagation();
