@@ -463,8 +463,7 @@
                   s.default.createElement(
                     "div",
                     {
-                      style: r,
-                      ref: this.props.ref
+                      style: r
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
