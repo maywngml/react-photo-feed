@@ -464,7 +464,7 @@
                     "div",
                     {
                       style: r,
-                      ref: e.props.ref
+                      ref: e.props.refff
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
