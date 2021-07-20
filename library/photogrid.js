@@ -465,12 +465,13 @@
               {
                 key: "render",
                 value: function () {
-                  var r = { height: "100%" };
-                  return s.default.createElement(
-                    "div",
-                    {
-                      style: r,
-                    },
+                  // var r = { height: "100%" };
+                  return (
+                  // s.default.createElement(
+                  //   "div",
+                  //   {
+                  //     style: r,
+                  //   },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   );
