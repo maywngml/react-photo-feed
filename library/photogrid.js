@@ -338,21 +338,29 @@
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
                 return s.default.createElement(
-                  //   "div",
-                  //   null,
-                  //   s.default.createElement(
-                  "video",
+                  "div",
                   {
                     className: o.join(" "),
-                    controls: true,
-                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
+                    onClick:
+                      e.pinchInFlag || e.pinchOutFlag
+                        ? null
+                        : e.image_clickHandler(t, n),
                   },
-                  s.default.createElement("source", {
-                    src: t.src,
-                    type: "video/mp4",
+                  s.default.createElement(
+                    "video",
+                    {
+                      // controls: true,
+                    },
+                    s.default.createElement("source", {
+                      src: t.src,
+                      type: "video/mp4",
+                    })
+                  ),
+                  s.default.createElement("img", {
+                    className: "button__in__video",
+                    src: e.props.playButton,
+                    alt: "playButton",
                   })
-                  //   ),
-                  //   null
                 );
               }),
               (e.getImageElement = function (t, n) {
@@ -360,28 +368,25 @@
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
-                //   i = { backgroundImage: "url(" + t.src + ")" };
-                return s.default.createElement(
-                  //   "div",
-                  //   null,
-                  //   s.default.createElement(
-                  "img",
-                  {
-                    className: o.join(" "),
-                    src: t.src,
-                    onClick: e.pinchInFlag || e.pinchOutFlag ? null : e.image_clickHandler(t, n),
-                    //   style: i,
-                  }
-                  // s.default.createElement("a", { href: "#" }, t.title)
-                  //   ),
-                  //   null
-                );
+                return s.default.createElement("img", {
+                  className: o.join(" "),
+                  src: t.src,
+                  onClick:
+                    e.pinchInFlag || e.pinchOutFlag
+                      ? null
+                      : e.image_clickHandler(t, n),
+                });
               }),
               (e.getFullScreenImage = function (t) {
-                var n = t
-                    ? [d.default.lightbox]
-                    : [d.default.hide, d.default.lightbox],
-                  r = e.props.photos;
+                let n;
+                if (t) {
+                  n = [d.default.lightbox];
+                  e.props.changeOptionsPinch(false);
+                } else {
+                  n = [d.default.hide, d.default.lightbox];
+                  e.props.changeOptionsPinch(true);
+                }
+                let r = e.props.photos;
                 return s.default.createElement(
                   "div",
                   {
@@ -390,26 +395,24 @@
                   },
                   r.map(function (n, r) {
                     if (n.isVideo) {
-                      return s.default.createElement("video", {
-                        key: n.id,
-                        // src: n.bigSrc,
-                        controls: true,
-                        className: n.bigSrc == t ? "opaque" : "",
-                        onClick: e.fullScreenImage_clickHandler
-                      },
+                      return s.default.createElement(
+                        "video",
+                        {
+                          key: n.id,
+                          // src: n.bigSrc,
+                          controls: true,
+                          className: n.bigSrc == t ? "opaque" : "",
+                        },
                         s.default.createElement("source", {
-                        src: n.bigSrc,
-                        type: "video/mp4"
+                          src: n.bigSrc,
+                          type: "video/mp4",
                         })
-                      )
-                    }
-                    else {
+                      );
+                    } else {
                       return s.default.createElement("img", {
                         key: n.id,
                         src: n.bigSrc,
                         className: n.bigSrc == t ? "opaque" : "",
-                        onClick:
-                          n.bigSrc == t ? e.fullScreenImage_clickHandler : null,
                       });
                     }
                   })
@@ -429,16 +432,6 @@
                     fullScreenImage: null,
                     fullScreenImageIndex: null,
                   });
-              }),
-              (e.fullScreenImage_clickHandler = function (t) {
-                t.stopPropagation();
-                var n = e.state.fullScreenImageIndex,
-                  r = e.getNextPhotoIndex(n),
-                  o = e.getPhoto(r);
-                e.setState({
-                  fullScreenImage: o ? o.bigSrc : null,
-                  fullScreenImageIndex: r,
-                });
               }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
@@ -490,7 +483,11 @@
                   return t.map(function (t, o) {
                     return s.default.createElement(
                       "div",
-                      { className: n.join(" "), style: r, key: t.id },
+                      {
+                        className: n.join(" "),
+                        style: r,
+                        key: t.id,
+                      },
                       t.isVideo
                         ? e.getVideoElement(t, o)
                         : e.getImageElement(t, o)
