@@ -459,7 +459,7 @@
                 key: "render",
                 value: function () {
                   // var r = { height: "100%" };
-                  return (
+                  // return (
                   // s.default.createElement(
                   //   "div",
                   //   {
@@ -467,7 +467,7 @@
                   //   },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
-                  );
+                  // );
                 },
               },
               {
