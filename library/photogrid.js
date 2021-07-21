@@ -460,10 +460,10 @@
                 value: function () {
                   var r = { height: "100%" };
                   return s.default.createElement(
-                    // "div",
-                    // {
-                    //   style: r,
-                    // },
+                    "div",
+                    {
+                      style: r,
+                    },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   );
