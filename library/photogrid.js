@@ -462,11 +462,10 @@
                   return s.default.createElement(
                     "div",
                     {
-                      // className: "contents",
                       style: r,
                     },
-                    this.getGridElements()
-                    // this.getFullScreenImage(this.state.fullScreenImage)
+                    this.getGridElements(),
+                    this.getFullScreenImage(this.state.fullScreenImage)
                   );
                 },
               },
