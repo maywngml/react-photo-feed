@@ -426,12 +426,12 @@
                 };
               }),
               (e.lightBox_clickHandler = function (t) {
-                e.props.changeOptionsAction(false, false);
                 "IMG" != t.target.tagName.toUpperCase() &&
                   e.setState({
                     fullScreenImage: null,
                     fullScreenImageIndex: null,
                   });
+                e.props.changeOptionsAction(false, true);
               }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
