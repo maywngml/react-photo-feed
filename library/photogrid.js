@@ -381,10 +381,8 @@
                 let n;
                 if (t) {
                   n = [d.default.lightbox];
-                  e.props.changeOptionsPinch(false);
                 } else {
                   n = [d.default.hide, d.default.lightbox];
-                  e.props.changeOptionsPinch(true);
                 }
                 let r = e.props.photos;
                 return s.default.createElement(
@@ -420,6 +418,7 @@
               }),
               (e.image_clickHandler = function (t, n) {
                 return function () {
+                  e.props.changeOptionsAction(false, false);
                   e.setState({
                     fullScreenImage: t.bigSrc,
                     fullScreenImageIndex: n,
@@ -427,6 +426,7 @@
                 };
               }),
               (e.lightBox_clickHandler = function (t) {
+                e.props.changeOptionsAction(false, false);
                 "IMG" != t.target.tagName.toUpperCase() &&
                   e.setState({
                     fullScreenImage: null,
