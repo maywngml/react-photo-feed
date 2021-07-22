@@ -389,7 +389,7 @@
                   "div",
                   {
                     className: n.join(" "),
-                    onClick: e.lightBox_clickHandler,
+                    onClick: e.lightBox_clickHandler(t, n),
                   },
                   r.map(function (n, r) {
                     if (n.isVideo) {
@@ -425,13 +425,14 @@
                   });
                 };
               }),
-              (e.lightBox_clickHandler = function (t) {
+              (e.lightBox_clickHandler = function (t, n) {
                 "IMG" != t.target.tagName.toUpperCase() &&
                   e.setState({
                     fullScreenImage: null,
                     fullScreenImageIndex: null,
                   });
-                e.props.changeOptionsAction(false, true);
+                n[0] === d.default.hide &&
+                  e.props.changeOptionsAction(false, true);
               }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
