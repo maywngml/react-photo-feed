@@ -422,6 +422,7 @@
                     fullScreenImage: t.bigSrc,
                     fullScreenImageIndex: n,
                   });
+                  e.props.changeOptionsPinch(false);
                 };
               }),
               (e.lightBox_clickHandler = function (t) {
@@ -431,7 +432,7 @@
                     fullScreenImageIndex: null,
                   });
                 t.targetClassName !== d.default.lightbox &&
-                  e.props.changeOptionsAction(false, true);
+                  e.props.changeOptionsPinch(true);
               }),
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1;
