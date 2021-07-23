@@ -349,7 +349,7 @@
                   s.default.createElement(
                     "video",
                     {
-                      poster=t.src
+                      poster: t.src,
                       // controls: true,
                     },
                     s.default.createElement("source", {
