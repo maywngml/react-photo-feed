@@ -349,10 +349,11 @@
                   s.default.createElement(
                     "video",
                     {
+                      poster=t.src
                       // controls: true,
                     },
                     s.default.createElement("source", {
-                      src: t.src,
+                      src: t.bigSrc,
                       type: "video/mp4",
                     })
                   ),
@@ -397,7 +398,7 @@
                         "video",
                         {
                           key: n.id,
-                          // src: n.bigSrc,
+                          // poster: n.src,
                           controls: true,
                           className: n.bigSrc == t ? "opaque" : "",
                         },
