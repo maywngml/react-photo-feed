@@ -338,6 +338,7 @@
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper],
                   BigPlayButton = require("video-react");
+                  console.log("확인", t);
                 return s.default.createElement(
                   "div",
                   {
