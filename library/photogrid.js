@@ -359,7 +359,7 @@
                     })
                   ),
                   s.default.createElement(BigPlayButton, {
-                    position="center"
+                    position: "center"
                   })
                 );
               }),
