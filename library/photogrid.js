@@ -415,11 +415,12 @@
               }),
               (e.image_clickHandler = function (t, n) {
                 return function () {
-                  e.setState({
+                  e.props.isFeed 
+                  ? e.props.changeSelectedFeedSeq(n)
+                  : e.setState({
                     fullScreenImage: t.originUrl,
                     fullScreenImageIndex: n,
-                  });
-                  e.props.changeOptionsPinch(false);
+                  }) && e.props.changeOptionsPinch(false);
                 };
               }),
               (e.lightBox_clickHandler = function (t) {
