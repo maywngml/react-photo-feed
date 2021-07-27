@@ -416,7 +416,7 @@
               (e.image_clickHandler = function (t, n) {
                 return function () {
                   e.props.isFeed 
-                  ? e.props.changeSelectedFeedSeq(n)
+                  ? e.props.goFeedViewPage(n)
                   : e.setState({
                     fullScreenImage: t.originUrl,
                     fullScreenImageIndex: n,
