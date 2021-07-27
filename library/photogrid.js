@@ -368,7 +368,6 @@
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper];
-                  console.log(t)
                 return s.default.createElement("img", {
                   className: o.join(" "),
                   src: t.thumbnailUrl,
@@ -489,9 +488,9 @@
                         style: r,
                         key: t.feedSeq,
                       },
-                      t.feedContentInfoList.contentAttribute === "VIDEO"
-                        ? e.getVideoElement(t.feedContentInfoList, t.feedSeq)
-                        : e.getImageElement(t.feedContentInfoList, t.feedSeq)
+                      t.feedContentInfoList[0].contentAttribute === "VIDEO"
+                        ? e.getVideoElement(t.feedContentInfoList[0], t.feedSeq)
+                        : e.getImageElement(t.feedContentInfoList[0], t.feedSeq)
                     );
                   });
                 },
