@@ -337,6 +337,7 @@
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
                   o = [d.default.imageWrapper],
+                  Player = require("video-react")
                   BigPlayButton = require("video-react");
                 return s.default.createElement(
                   "div",
@@ -348,19 +349,16 @@
                         : e.image_clickHandler(t, n),
                   },
                   s.default.createElement(
-                    "video",
+                    Player,
                     {
+                      className: o.join(" "),
                       poster: t.thumbnailUrl,
-                      // controls: true,
+                      src: t.originUrl
                     },
-                    s.default.createElement("source", {
-                      src: t.originUrl,
-                      type: "video/mp4",
+                    s.default.createElement(BigPlayButton, {
+                      position: "center"
                     })
-                  ),
-                  s.default.createElement(BigPlayButton, {
-                    position: "center"
-                  })
+                  )
                 );
               }),
               (e.getImageElement = function (t, n) {
