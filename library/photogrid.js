@@ -336,7 +336,8 @@
                 var r = e.props.InformationElement
                     ? e.props.InformationElement
                     : m.DefaultInfoElement,
-                  o = [d.default.imageWrapper];
+                  o = [d.default.imageWrapper],
+                  BigPlayButton = require("video-react");
                 return s.default.createElement(
                   "div",
                   {
@@ -349,18 +350,16 @@
                   s.default.createElement(
                     "video",
                     {
-                      poster: t.src,
+                      poster: t.thumbnailUrl,
                       // controls: true,
                     },
                     s.default.createElement("source", {
-                      src: t.bigSrc,
+                      src: t.originUrl,
                       type: "video/mp4",
                     })
                   ),
-                  s.default.createElement("img", {
-                    className: "button__in__video",
-                    src: e.props.playButton,
-                    alt: "playButton",
+                  s.default.createElement(BigPlayButton, {
+                    position="center"
                   })
                 );
               }),
@@ -371,7 +370,7 @@
                   o = [d.default.imageWrapper];
                 return s.default.createElement("img", {
                   className: o.join(" "),
-                  src: t.src,
+                  src: t.thumbnailUrl,
                   onClick:
                     e.pinchInFlag || e.pinchOutFlag
                       ? null
@@ -385,7 +384,7 @@
                 } else {
                   n = [d.default.hide, d.default.lightbox];
                 }
-                let r = e.props.photos;
+                let r = e.props.contents;
                 return s.default.createElement(
                   "div",
                   {
@@ -398,20 +397,20 @@
                         "video",
                         {
                           key: n.id,
-                          // poster: n.src,
+                          poster: n.thumbnailUrl,
                           controls: true,
-                          className: n.bigSrc == t ? "opaque" : "",
+                          className: n.originUrl === t ? "opaque" : "",
                         },
                         s.default.createElement("source", {
-                          src: n.bigSrc,
+                          src: n.originUrl,
                           type: "video/mp4",
                         })
                       );
                     } else {
                       return s.default.createElement("img", {
                         key: n.id,
-                        src: n.bigSrc,
-                        className: n.bigSrc == t ? "opaque" : "",
+                        src: n.originUrl,
+                        className: n.originUrl == t ? "opaque" : "",
                       });
                     }
                   })
@@ -420,7 +419,7 @@
               (e.image_clickHandler = function (t, n) {
                 return function () {
                   e.setState({
-                    fullScreenImage: t.bigSrc,
+                    fullScreenImage: t.originUrl,
                     fullScreenImageIndex: n,
                   });
                   e.props.changeOptionsPinch(false);
@@ -442,13 +441,13 @@
                 return 50 / e.props.columns - 1;
               }),
               (e.getNextPhotoIndex = function (t) {
-                return e.props.photos.length > t + 1 ? t + 1 : 0;
+                return e.props.contents.length > t + 1 ? t + 1 : 0;
               }),
               (e.getPreviousPhotoIndex = function (t) {
-                return t - 1 >= 0 ? t - 1 : e.props.photos.length - 1;
+                return t - 1 >= 0 ? t - 1 : e.props.contents.length - 1;
               }),
               (e.getPhoto = function (t) {
-                return e.props.photos.length > t ? e.props.photos[t] : null;
+                return e.props.contents.length > t ? e.props.contents[t] : null;
               }),
               (e.state = { fullScreenImage: null, fullScreenImageIndex: null }),
               e
@@ -475,7 +474,7 @@
                 key: "getGridElements",
                 value: function () {
                   var e = this,
-                    t = this.props.photos,
+                    t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
                       width: this.getPercentWidth() + "%",
@@ -487,11 +486,11 @@
                       {
                         className: n.join(" "),
                         style: r,
-                        key: t.id,
+                        key: t.feedSeq,
                       },
-                      t.isVideo
-                        ? e.getVideoElement(t, o)
-                        : e.getImageElement(t, o)
+                      t.feedContentInfoList.contentAttribute === "VIDEO"
+                        ? e.getVideoElement(t.feedContentInfoList, t.feedSeq)
+                        : e.getImageElement(t.feedContentInfoList, t.feedSeq)
                     );
                   });
                 },
