@@ -10,7 +10,7 @@
   transition-delay: 0.03s;
 }
 .PhotoGrid__imageWrapper___1YTK9 {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 100%;
   object-fit: cover;
