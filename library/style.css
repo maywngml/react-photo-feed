@@ -9,6 +9,10 @@
   transition: all 0.2s linear;
   transition-delay: 0.03s;
 }
+.PhotoGrid__imageWrapper___1YTK9 + .PhotoGrid__imageWrapper___1YTK9 {
+  padding-left: 5px;
+}
+
 .PhotoGrid__imageWrapper___1YTK9 {
   /* position: relative; */
   width: 100%;
