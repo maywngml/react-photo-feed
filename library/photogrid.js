@@ -456,12 +456,7 @@
               {
                 key: "render",
                 value: function () {
-                  var r = { height: "100%" }
-                  return s.default.createElement(
-                    "div",
-                    {
-                      style: r,
-                    },
+                  return (
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   )
@@ -474,8 +469,8 @@
                     t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
-                      width: this.getPercentWidth() + "%",
-                      height: this.getPercentHeight() + "%",
+                      width: this.getPercentWidth() + "vw",
+                      height: this.getPercentHeight() + "vh",
                     }
                   return t.map(function (t, o) {
                     return s.default.createElement(
