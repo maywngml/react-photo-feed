@@ -456,7 +456,9 @@
               {
                 key: "render",
                 value: function () {
-                  return (
+                  return s.default.createElement(
+                    "div", 
+                    null,
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   )
