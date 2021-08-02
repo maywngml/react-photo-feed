@@ -434,9 +434,9 @@
               (e.getPercentWidth = function () {
                 return 100 / e.props.columns - 1
               }),
-              (e.getPercentHeight = function () {
-                return 50 / e.props.columns - 1
-              }),
+              // (e.getPercentHeight = function () {
+              //   return 50 / e.props.columns - 1
+              // }),
               (e.getNextPhotoIndex = function (t) {
                 return e.props.contents.length > t + 1 ? t + 1 : 0
               }),
@@ -458,7 +458,9 @@
                 value: function () {
                   return s.default.createElement(
                     "div", 
-                    null,
+                    {
+                      className: "photoGrid"
+                    },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
                   )
@@ -471,8 +473,8 @@
                     t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
-                      width: this.getPercentWidth() + "vw",
-                      height: this.getPercentHeight() + "vh",
+                      width: this.getPercentWidth() + "vw"
+                      // height: this.getPercentHeight() + "vh"
                     }
                   return t.map(function (t, o) {
                     return s.default.createElement(

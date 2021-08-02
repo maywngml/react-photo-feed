@@ -1,18 +1,19 @@
+.photoGrid {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .PhotoGrid__imageGridItem___hFxCm {
   display: inline-block;
   box-sizing: border-box;
   float: left;
-  padding: 10px;
+  padding: 5px;
   object-fit: cover;
   overflow: hidden;
   position: relative;
   transition: all 0.2s linear;
   transition-delay: 0.03s;
 }
-.PhotoGrid__imageGridItem___hFxCm + .PhotoGrid__imageGridItem___hFxCm {
-  padding-left: 5px;
-}
-
 .PhotoGrid__imageWrapper___1YTK9 {
   /* position: relative; */
   width: 100%;
