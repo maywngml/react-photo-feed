@@ -460,7 +460,7 @@
                     "div", 
                     {
                       className: "photoGrid",
-                      style: {height: e.props.contentsAreaHeight + "px"}
+                      style: {height: this.props.contentsAreaHeight + "px"}
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
