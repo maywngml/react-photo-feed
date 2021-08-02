@@ -473,7 +473,7 @@
                     t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
-                      width: this.getPercentWidth() + "vw"
+                      width: this.getPercentWidth() + "%"
                       // height: this.getPercentHeight() + "vh"
                     }
                   return t.map(function (t, o) {
