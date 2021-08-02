@@ -459,7 +459,8 @@
                   return s.default.createElement(
                     "div", 
                     {
-                      className: "photoGrid"
+                      className: "photoGrid",
+                      style: {height: e.props.contentsAreaHeight}
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
