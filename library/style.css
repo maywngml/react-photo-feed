@@ -14,6 +14,11 @@
   transition: all 0.2s linear;
   transition-delay: 0.03s;
 }
+
+.PhotoGrid__imageGridItem___hFxCm + .PhotoGrid__imageGridItem___hFxCm {
+  padding: 3px;
+}
+
 .PhotoGrid__imageWrapper___1YTK9 {
   /* position: relative; */
   width: 100%;
