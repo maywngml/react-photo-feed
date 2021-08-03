@@ -431,9 +431,9 @@
                 t.targetClassName !== d.default.lightbox &&
                   e.props.changeOptionsPinch(true)
               }),
-              (e.getPercentWidth = function () {
-                return 100 / e.props.columns - 1
-              }),
+              // (e.getPercentWidth = function () {
+              //   return 100 / e.props.columns - 1
+              // }),
               // (e.getPercentHeight = function () {
               //   return 50 / e.props.columns - 1
               // }),
@@ -460,7 +460,10 @@
                     "div", 
                     {
                       className: "photoGrid",
-                      style: {height: this.props.contentsAreaHeight + "px"}
+                      style: {
+                        width: this.props.contentsAreaWidth + "px", 
+                        height: this.props.contentsAreaHeight + "px"
+                      }
                     },
                     this.getGridElements(),
                     this.getFullScreenImage(this.state.fullScreenImage)
@@ -474,7 +477,7 @@
                     t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
-                      width: this.getPercentWidth() + "%"
+                      width: this.props.getContentWidth() + "px"
                       // height: this.getPercentHeight() + "vh"
                     }
                   return t.map(function (t, o) {

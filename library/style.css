@@ -1,5 +1,4 @@
 .photoGrid {
-  width: 95%;
   margin: 0 auto;
 }
 
@@ -7,16 +6,12 @@
   display: inline-block;
   box-sizing: border-box;
   float: left;
-  padding: 5px;
+  padding: 3px;
   object-fit: cover;
   overflow: hidden;
   position: relative;
   transition: all 0.2s linear;
   transition-delay: 0.03s;
-}
-
-.PhotoGrid__imageGridItem___hFxCm + .PhotoGrid__imageGridItem___hFxCm {
-  padding: 3px;
 }
 
 .PhotoGrid__imageWrapper___1YTK9 {
