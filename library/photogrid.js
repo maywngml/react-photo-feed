@@ -346,6 +346,7 @@
                       e.pinchInFlag || e.pinchOutFlag
                         ? null
                         : e.image_clickHandler(t, n),
+                    key: t.contentSeq
                   },
                   s.default.createElement(
                     videoReact.Player,
@@ -371,6 +372,7 @@
                     e.pinchInFlag || e.pinchOutFlag
                       ? null
                       : e.image_clickHandler(t, n),
+                  key: t.contentSeq
                 })
               }),
               (e.getFullScreenImage = function (t) {
@@ -466,7 +468,8 @@
                       }
                     },
                     this.getGridElements(),
-                    this.getFullScreenImage(this.state.fullScreenImage)
+                    // 마이 라운드 모아보기 페이지 만들 시 주석 풀기
+                    // this.getFullScreenImage(this.state.fullScreenImage)
                   )
                 },
               },
