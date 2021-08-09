@@ -464,7 +464,6 @@
                       className: "photoGrid",
                       style: {
                         width: this.props.contentsAreaWidth + "px", 
-                        height: this.props.contentsAreaHeight + "px"
                       }
                     },
                     this.getGridElements(),
