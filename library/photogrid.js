@@ -346,7 +346,7 @@
                       e.pinchInFlag || e.pinchOutFlag
                         ? null
                         : e.image_clickHandler(t, n),
-                    key: t.contentSeq
+                    key: t.contentSeq,
                   },
                   s.default.createElement(
                     videoReact.Player,
@@ -372,7 +372,7 @@
                     e.pinchInFlag || e.pinchOutFlag
                       ? null
                       : e.image_clickHandler(t, n),
-                  key: t.contentSeq
+                  key: t.contentSeq,
                 })
               }),
               (e.getFullScreenImage = function (t) {
@@ -459,14 +459,15 @@
                 key: "render",
                 value: function () {
                   return s.default.createElement(
-                    "div", 
+                    "div",
                     {
                       className: "photoGrid",
                       style: {
-                        width: this.props.contentsAreaWidth + "px", 
-                      }
+                        width: this.props.contentsAreaWidth + "px",
+                        height: this.props.getContentsAreaHeight() + "px",
+                      },
                     },
-                    this.getGridElements(),
+                    this.getGridElements()
                     // 마이 라운드 모아보기 페이지 만들 시 주석 풀기
                     // this.getFullScreenImage(this.state.fullScreenImage)
                   )
@@ -479,7 +480,7 @@
                     t = this.props.contents,
                     n = [d.default.imageGridItem],
                     r = {
-                      width: this.props.getContentWidth() + "px"
+                      width: this.props.getContentWidth() + "px",
                       // height: this.getPercentHeight() + "vh"
                     }
                   return t.map(function (t, o) {
