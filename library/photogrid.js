@@ -428,23 +428,27 @@
 							{
 								key: 'render',
 								value: function () {
-									var cw = this.props.contentsAreaWidth,
-										cardColumn = this.props.cardColumn,
-										contents = this.props.contents;
-									return s.default.createElement(
-										'div',
-										{
-											className: 'photoGrid',
-											style: {
-												width: this.props.contentsAreaWidth + 'px',
-												height: Math.ceil(contents.length / cardColumn) * ((cw / cardColumn) * 0.562 + 3) + 'px',
-											},
-										},
-										this.getGridElements()
-										// 마이 라운드 모아보기 페이지 만들 시 주석 풀기
-										// this.getFullScreenImage(this.state.fullScreenImage)
-									);
-								},
+                  // overflow 속성 추가함으로써 높이 지정안해도 됨
+                  // var cw = this.props.contentsAreaWidth,
+                  // 	cardColumn = this.props.cardColumn,
+                  // 	contents = this.props.contents;
+                  return s.default.createElement(
+                    "div",
+                    {
+                      className: "photoGrid",
+                      style: {
+                        width: this.props.contentsAreaWidth + "px",
+                        // height:
+                        //   Math.ceil(contents.length / cardColumn) *
+                        //     ((cw / cardColumn) * 0.562 + 3) +
+                        //   "px",
+                      },
+                    },
+                    this.getGridElements()
+                    // 마이 라운드 모아보기 페이지 만들 시 주석 풀기
+                    // this.getFullScreenImage(this.state.fullScreenImage)
+                  )
+                },
 							},
 							{
 								key: 'getGridElements',

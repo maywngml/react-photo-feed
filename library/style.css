@@ -1,5 +1,6 @@
 .photoGrid {
 	margin: 10px auto 0 auto;
+	overflow: auto;
  }
  
  .PhotoGrid__imageGridItem___hFxCm {
